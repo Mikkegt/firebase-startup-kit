@@ -6,3 +6,7 @@
 typings/
 
 node_modules/
+
+/src/config.js
+/src/config1.js
+/image/*.jpg
