@@ -102,7 +102,7 @@ function ComplexGrid(props) {
      <Grid container justify="center" alignItems="center" direction="row" className={classes.root}>
      <Grid className={classes.caption}>
           <Typography component="h2" variant="h5" gutterBottom>
-          Hello React+Firebase! 
+          Hello React+Firebase! Let's enjoy
           </Typography>
           </Grid>
    <div className={classes2.root}>
