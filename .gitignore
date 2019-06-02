@@ -25,4 +25,4 @@ yarn-error.log*
 
 /src/config.js
 /src/config1.js
-/src/image/*.jpg
+#/src/image/*.jpg
