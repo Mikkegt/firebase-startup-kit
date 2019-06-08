@@ -16,6 +16,9 @@ import image1 from './image/img1.jpg';
 import image2 from './image/img2.jpg';
 import image3 from './image/img3.jpg';
 import image4 from './image/img4.jpg';
+//import AdSense from 'react-adsense';
+//import { createGenerateId } from 'jss';
+
 //import tileData from './tileData';
 
 const styles = theme => ({
@@ -80,6 +83,11 @@ const tileData = [
   },
 ];
 
+const adsConfig = {
+  adClient: 'ca-pub-6454302595730205',
+  adSlot: '7654738027',
+};
+
 function ComplexGrid(props) {
   const { classes, user } = props;
   const classes2 = useStyles();
@@ -100,33 +108,33 @@ function ComplexGrid(props) {
    <React.Fragment>
      <Header user={user} />
      <Grid container justify="center" alignItems="center" direction="row" className={classes.root}>
-     <Grid className={classes.caption}>
+        <Grid className={classes.caption}>
           <Typography component="h2" variant="h5" gutterBottom>
-          Hello React+Firebase! Let's enjoy
+            Hello React+Firebase! Let's enjoy
           </Typography>
-          </Grid>
-   <div className={classes2.root}>
-      <GridList className={classes2.gridList} cols={2.5}>
-        {tileData.map(tile => (
-          <GridListTile key={tile.img}>
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              classes2={{
-                root: classes2.titleBar,
-                title: classes2.title,
-              }}
-              actionIcon={
-                <IconButton>
-                  <StarBorderIcon className={classes2.title} />
-                </IconButton>
-              }
-            />
-          </GridListTile>
-        ))}
-      </GridList>
-    </div>
-    </Grid>
+        </Grid>
+        <div className={classes2.root}>
+          <GridList className={classes2.gridList} cols={2.5}>
+            {tileData.map(tile => (
+              <GridListTile key={tile.img}>
+                <img src={tile.img} alt={tile.title} />
+                <GridListTileBar
+                  title={tile.title}
+                  classes2={{
+                    root: classes2.titleBar,
+                    title: classes2.title,
+                  }}
+                  actionIcon={
+                    <IconButton>
+                      <StarBorderIcon className={classes2.title} />
+                    </IconButton>
+                  }
+                />
+            </GridListTile>
+            ))}
+          </GridList>
+        </div>
+      </Grid>
     </React.Fragment>
   );
 }
