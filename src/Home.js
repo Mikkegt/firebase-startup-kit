@@ -82,12 +82,12 @@ const tileData = [
     author: 'author',
   },
 ];
-
+/*
 const adsConfig = {
   adClient: 'ca-pub-6454302595730205',
   adSlot: '7654738027',
 };
-
+*/
 function ComplexGrid(props) {
   const { classes, user } = props;
   const classes2 = useStyles();
